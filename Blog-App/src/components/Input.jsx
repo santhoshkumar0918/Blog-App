@@ -4,7 +4,7 @@ import React, { useId } from 'react'
 const Input  = React.forwardRef( function Input({
     label,
     type = 'Text',
-    classname = '',
+    className = '',
     // ...props: This collects the remaining props into a props object.
     ...props},
     ref){
@@ -20,13 +20,13 @@ It checks if the label variable is truthy. If label is truthy (i.e., it exists a
             className='inline-block mb-1 pl-1 '>{label}</input>
         )}
         <input 
-        className=''
+         className={`px-3 py-2 rounded-lg bg-white text-black focus:bg-gray-50 duration-200 border border-gray-200 w-full ${className} `}
         type={type}
         ref={ref}
+         {...props}
         id={id}
-        {...props}
         
-        ></input>
+          ></input>
      </div>
    </>
 
