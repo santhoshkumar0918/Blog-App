@@ -13,6 +13,7 @@ function App() {
     <>
  <div>
   <main>
+   
    <Footer/>
     <Outlet/>
   </main>
