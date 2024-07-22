@@ -44,8 +44,18 @@ function PostForm( {post}){
       if(dbPost){
         navigate(`/post/${dbPost.$id}`)
       }
-     
-   
+      else{
+        const file = await appwriteService.uploadFile(data.image[0])
+        if(file){
+          const fileId = file.$id
+          data.featuredImage = fileId
+          const dbPost = await appwriteService.createPost({...data,userid : userData.$id})
+          if(dbPost){
+            navigate(`/post/${dbPost.$id}`)
+          }
+        }
+
+      }
     
    }
 
