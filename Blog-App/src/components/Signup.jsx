@@ -59,8 +59,31 @@ function Signup() {
    {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
         <form className='mt-8' onSubmit={handleSubmit(create)}>
             <div className='space-y-5'></div>
+            <Input
+            {...regsiter("name",{required:true})}
+            label='Full name :'
+            placeholder='Enter your full name'
+            ></Input>
+            <Input
+            {...regsiter("name",{required:true})}
+            label='Email:'
+            placeholder='Enter your Email'
+            type='email'
+            />
+            <Input
+            {...regsiter("password",{required:true})}
+            label='Password'
+            placeholder='Enter Password'
+            type='password'
+            />
+            <div>
+                <Button className='w-full' type='submit'>
+                    Create Account
+                </Button>
+            </div>
 
 
+  
         </form>
         </div>
     </div>
