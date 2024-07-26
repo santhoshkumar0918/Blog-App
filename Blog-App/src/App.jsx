@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Footer from './components/Footer/Footer.jsx'
+import Signup from './components/Signup.jsx'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   <main>
    
    <Footer/>
+    
     <Outlet/>
   </main>
   

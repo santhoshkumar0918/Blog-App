@@ -37,9 +37,9 @@ function Signup() {
 
   return (
     <div className='flex items-center justify-center '>
-        <div className={`mx-auto w-full mx-w-lg bg-gray-400 p-10 rounded-xl border border-black/10`}>
+        <div className={`mx-auto w-full max-w-lg bg-gray-400 p-10 rounded-xl border border-black/10`}>
         <div className='mb-2 flex justify-center'>
-            <span className='inline-block w-full mx-w-[100px'>
+            <span className='inline-block w-full max-w-[100px]'>
                 <Logo width='100%'/>
             </span>
         </div>
@@ -48,7 +48,7 @@ function Signup() {
         Signup to create a account</h2>
         <p 
         className='mt-2 text-center text-base text-black/60'
-        >Already have an account
+        >Already have an account ?&nbsp;
         <Link
         to="/login"
         className='font-medium text-primary  transition-all duration-200 hover:underline'
