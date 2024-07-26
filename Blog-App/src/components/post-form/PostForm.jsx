@@ -59,12 +59,14 @@ function PostForm( {post}){
     
    }
 
+   
    const slugTransform = useCallback((value) => {
     if(value && typeof value ==='string')
       return value.trim().toLowerCase()
       .replace(/[^a-zA-Z\d\s]+/g, '-')
       .replace(/\s/g,'-')
     },[])
+
 
     React.useEffect(() => {
       watch(({name},value) => {
@@ -75,9 +77,6 @@ function PostForm( {post}){
       })
     },[])
   
-
-
-
 
   return (
    <form onSubmit={handleSubmit(submit)}>
