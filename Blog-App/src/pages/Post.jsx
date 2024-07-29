@@ -47,9 +47,18 @@ function Post() {
       <div className=' w-full flex justify-center mb-4 relative border rounded-xl p-2'>
         <img src={appwriteService.getFilePreview(post.featuredImage)} alt={post.title} className='rounded-xl'/>
         {isAuthor && (
-          
-
+            <div className="absolute-right-6 top-6">
+              <Link to={`/edit/post/${post.$id}`}>
+              <Button bgColor='bg-red-500' onClick={deletePost} >Delete</Button>
+              </Link>
+            </div>
         )}
+            </div>
+        <div className="w-full mb-6">
+          <h1 className="text-2xl font-bold">{post.title}</h1>
+          <div className='brower-css'>
+            {Parse(post.content)}
+          </div>
       </div>
     </Container>
   </div>  
