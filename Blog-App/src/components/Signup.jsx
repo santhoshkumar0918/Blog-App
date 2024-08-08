@@ -54,7 +54,7 @@ function Signup() {
         className='font-medium text-primary  transition-all duration-200 hover:underline'
         >
             Signup
-        </Link>
+        </Link>   
    </p>
    {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
         <form className='mt-8' onSubmit={handleSubmit(create)}>

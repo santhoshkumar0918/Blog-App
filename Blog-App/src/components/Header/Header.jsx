@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container} from '../container/Container.jsx'
+import Container from '../container/Container.jsx'
 import { Link } from 'react-router-dom'
 import Logo from '../Logo'
 import { useSelector } from 'react-redux'
