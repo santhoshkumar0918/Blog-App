@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
-import { login, logout } from "./store/authSlice";
+import { login as authLogin, logout } from "./store/authSlice";
 import Header from './components/Header/Header.jsx'
 import Footer from "./components/Footer/Footer.jsx";
 import authService from './appwrite/auth.js'
@@ -25,18 +25,20 @@ function App() {
     }, [dispatch]);
 
     return !loading ? (
-      <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
+        <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
           <div className="w-full block">
-              <Header />
-              <main>
-                  <Outlet />
-              </main>
+            <Header />
+            <main>
+              <Outlet />
+            </main>
           </div>
           <div className="w-full block">
-              <Footer />
+            <Footer />
           </div>
-      </div>
-  ) : null;
-}
+
+        </div>
+      ) : null
+    }
+    
 
 export default App

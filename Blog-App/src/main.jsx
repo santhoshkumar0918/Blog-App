@@ -27,11 +27,11 @@ const router  = createBrowserRouter([
     },
     {
       path: "/login",
-      element: 
+      element: (
         <Protected authentication={false}>
           <Login />
         </Protected>
-      
+      ),
     },
 
     {
@@ -40,7 +40,7 @@ const router  = createBrowserRouter([
         <Protected authentication={false}>
           <Signup/>
         </Protected>
-      )
+      ),
     },
     {
       path : '/all-post',
@@ -48,7 +48,7 @@ const router  = createBrowserRouter([
         <Protected authentication={true}>
           <AllPost/>
         </Protected>
-      )
+      ),
     },
     {
       path : '/add-post',
@@ -56,7 +56,7 @@ const router  = createBrowserRouter([
         <Protected authentication={true}>
           <AddPost/>
         </Protected>
-      )
+      ),
     },
     {
       // Here slug is used for 
@@ -65,7 +65,7 @@ const router  = createBrowserRouter([
         <Protected authentication>
           <EditPost/>
         </Protected>
-      )
+      ),
     },
     {
       path : '/post/:slug',
@@ -73,7 +73,7 @@ const router  = createBrowserRouter([
         <Protected authentication>
           <Post/>
         </Protected>
-      )
+      ),
     },
 
   ]
@@ -92,6 +92,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
   </React.StrictMode>
 )
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
+);
 
 
 
