@@ -14,6 +14,7 @@ import AllPost from './pages/AllPost.jsx'
 import AddPost from './pages/AddPost.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
+import Logout from './components/Logout.jsx' // Ensure Logout is imported
 
 const router = createBrowserRouter([
   {
@@ -72,14 +73,22 @@ const router = createBrowserRouter([
           </Protected>
         ),
       },
+      {
+        path: '/logout', // Ensure there's no extra comma before this route
+        element: (
+          <Protected authentication={true}>
+            <Logout />
+          </Protected>
+        ),
+      }
     ]
   }
-])
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} />a
     </Provider>
   </React.StrictMode>
 );
