@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux'
 import {login} from '../store/authSlice'
 
 
-function Signup() {
+function SignupComponent() {
 
  const navigate = useNavigate()
  const [error,setError] = useState("")
@@ -90,4 +90,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default SignupComponent
